@@ -1,0 +1,13 @@
+<div ng-repeat="pitch in pitches">
+<div class="entry">
+  <h1>{{pitch.title}}</h1>
+  <h2>From the mind of: {{pitch.author}}</h2>
+  <p>{{pitch.content}}</p>
+  <p>{{pitch.needs}}</p>
+  <div ng-if="pitch.comments.length > 0">
+    <p> Comments: {{pitch.comments}}</p>
+  </div>
+  <a href="" class="btn btn-primary">Comment</a>
+
+</div>
+</div>
