@@ -1,0 +1,25 @@
+#copy {
+  font-size: 10px; }
+
+header {
+  text-align: center;
+  background-color: green;
+  color: white; }
+  header img {
+    margin-left: 25px;
+    margin-top: 7px;
+    float: left;
+    height: 30px; }
+  header h1 {
+    margin-top: 0px; }
+  header a {
+    width: 100%; }
+
+.noRad {
+  border-radius: 0px; }
+
+.noRight {
+  padding-right: 0; }
+
+.noLeft {
+  padding-left: 0; }
