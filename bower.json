@@ -1,0 +1,24 @@
+{
+  "name": "pitchmaster3000",
+  "homepage": "https://github.com/Pitchmaster/pitchmaster3000",
+  "authors": [
+    "tken85"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "angular-route": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "underscore": "~1.8.3"
+  }
+}
