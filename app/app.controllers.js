@@ -8,13 +8,13 @@
     })
     .controller('PitchController', function($scope, $routeParams, PitchService){
       var vm = this;
-
+      vm.pitches=[];
 
       vm.addPitch = function(newPitch){
         PitchService.emit('new:pitch', newPitch);
         vm.newPitch = "";
       };
-      
+
       PitchService.on('new:pitch', function(data){
         var pitch = {
           title : data.title,
@@ -24,12 +24,12 @@
           comments: [],
         };
 
-        $scope.pitches.push(pitch);
+        vm.pitches.push(pitch);
 
       });
 
       PitchService.on('all:pitches',function(data){
-        $scope.pitches= data;
+        vm.pitches= data;
       });
 
 
