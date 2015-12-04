@@ -6,7 +6,7 @@
     .controller('MainController', function($scope, $routeParams){
 
     })
-    .controller('PitchController', function($scope, $routeParms, PitchService){
+    .controller('PitchController', function($scope, $routeParams, PitchService){
       var vm = this;
       PitchService.getPitches().then(function(pitches){
         vm.pitches = pitches;
