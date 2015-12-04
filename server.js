@@ -46,7 +46,7 @@ io.on('connection', function(socket) {
       console.log(data);
       io.emit('new:pitch', data.title, data.content, data.needs);
     });
-  })
-})
+  });
+});
 
 console.log('WE ARE RUNNING ON PORT:' + port);
