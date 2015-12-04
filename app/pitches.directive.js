@@ -9,7 +9,7 @@
         restrict: 'EA',
         templateUrl: 'views/pitches.directive.html',
         scope: {
-          pick: '=',
+          pitch: '=',
           action: '&'
         },
       };
