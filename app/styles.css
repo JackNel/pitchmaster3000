@@ -23,3 +23,7 @@ header {
 
 .noLeft {
   padding-left: 0; }
+
+.entry {
+  border: 1px solid black;
+  padding: 10px; }
