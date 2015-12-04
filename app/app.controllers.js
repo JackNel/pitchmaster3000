@@ -36,8 +36,8 @@
       });
 
     vm.addComment = function(pitch, newComment){
+      console.log('fire');
       console.log(pitch);
-      pitch.
       PitchService.emit('new:comment', newComment);
       vm.newComment="";
     };

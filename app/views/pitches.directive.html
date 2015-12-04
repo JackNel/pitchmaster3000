@@ -7,7 +7,7 @@
     <p> Comments: {{pitch.comments}}</p>
   </div>
   <a href="" class="btn btn-primary" ng-init="count=0" ng-click="count=count+1">Comment</a>
-  <form ng-if="count %2 !=0" ng-submit="pitchCtrl.addComment(pitch, comment)">
+  <form ng-if="count %2 !=0" ng-submit="action(pitch, comment)">
     <input type="name" class="form-control" ng-model=comment.name placeholder="Your Name" value="">
     <input type="name" class="form-control" ng-model=comment.text placeholder="Your Comment" value="">
     <input type="submit" class="form-control" value="submit" name="submit">
