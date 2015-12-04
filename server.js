@@ -44,7 +44,7 @@ io.on('connection', function(socket) {
     console.log(pitch);
     pitch.save(function(err,data) {
       console.log(data);
-      io.emit('new:pitch', data.title, data.content, data.needs);
+      io.emit('new:pitch', data);
     });
   });
 });
