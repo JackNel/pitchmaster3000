@@ -1,9 +1,9 @@
 <h1>Pitch it up!</h1>
 
 <form ng-submit="pitchCtrl.addPitch(newPitch)">
-  <input type="text" ng-model="newPitch.title" name="title" class="form-control" placeholder="Prospective Title">
-  <input type="text" ng-model="newPitch.author" name="author" class="form-control" placeholder="Author">
-  <input type="text" ng-model="newPitch.content"name="content" class="form-control" placeholder="The Basics">
-  <input type="text" ng-model="newPitch.needs" name="needs" class="form-control" placeholder="Needs">
+  <input type="text" ng-model="newPitch.title" name="title" class="form-control" placeholder="Prospective Title" value="">
+  <input type="text" ng-model="newPitch.author" name="author" class="form-control" placeholder="Author" value="">
+  <input type="text" ng-model="newPitch.content"name="content" class="form-control" placeholder="The Basics" value="">
+  <input type="text" ng-model="newPitch.needs" name="needs" class="form-control" placeholder="Needs" value="">
   <input type="submit" name="submit" class="form-control" value="Submit">
 </form>
