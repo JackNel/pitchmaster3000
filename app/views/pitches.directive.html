@@ -4,7 +4,11 @@
   <p>{{pitch.content}}</p>
   <p>{{pitch.needs}}</p>
   <div ng-if="pitch.comments.length > 0">
-    <p> Comments: {{pitch.comments}}</p>
+    <p> Comments:</p>
+    <div ng-repeat="comment in pitch.comments">
+      <h5>{{comment.name}}</h5>
+      <p>{{comment.text}}</p>
+    </div>
   </div>
   <a href="" class="btn btn-primary" ng-init="count=0" ng-click="count=count+1">Comment</a>
   <form ng-if="count %2 !=0" ng-submit="action({pitch: pitch, comment: comment })">

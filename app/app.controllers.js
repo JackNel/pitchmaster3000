@@ -24,7 +24,7 @@
       vm.putComment = function(pitch){
         PitchService.emit('new:comment', pitch);
         vm.newComment = "";
-      }
+      };
       PitchService.on('new:pitch', function(data) {
         var pitch = {
           title: data.title,
