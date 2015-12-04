@@ -42,6 +42,7 @@ io.on('connection', function(socket) {
         author: val.author,
         content: val.content,
         needs: val.needs,
+        comment: val.comments,
     });
     // console.log(pitch);
     pitch.save(function(err,data) {
