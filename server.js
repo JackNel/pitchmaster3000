@@ -32,7 +32,7 @@ io.on('connection', function(socket) {
 
     Pitch.find({},function(err,data) {
       console.log(data);
-      socket.emit('all:pitches', data)
+      socket.emit('all:pitches', data);
     });
 
   socket.on('new:pitch', function(val) {

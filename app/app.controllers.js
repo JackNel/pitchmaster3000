@@ -3,23 +3,30 @@
 
   angular
     .module('pitchmaster')
-    .controller('MainController', function($scope, $routeParams){
+    .controller('MainController', function($scope, $routeParams) {
 
     })
-    .controller('PitchController', function($scope, $routeParams, PitchService){
+    .controller('PitchController', function($scope, $route, $routeParams, PitchService) {
       var vm = this;
-      vm.pitches=[];
+      vm.pitches = [];
 
-      vm.addPitch = function(newPitch){
+      vm.getPitches = function() {
+        PitchService.on('all:pitches', function(data) {
+          vm.pitches = data;
+        });
+      };
+      vm.getPitches();
+
+      vm.addPitch = function(newPitch) {
         PitchService.emit('new:pitch', newPitch);
         vm.newPitch = "";
       };
 
-      PitchService.on('new:pitch', function(data){
+      PitchService.on('new:pitch', function(data) {
         var pitch = {
-          title : data.title,
-          content : data.content,
-          needs : data.needs,
+          title: data.title,
+          content: data.content,
+          needs: data.needs,
           author: data.author,
           comments: [],
         };
@@ -27,14 +34,6 @@
         vm.pitches.push(pitch);
 
       });
-
-      vm.getPitches = function(){
-      PitchService.on('all:pitches',function(data){
-        vm.pitches= data;
-      });
-    };
-    vm.getPitches();
-
     });
 
 }());
