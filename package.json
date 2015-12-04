@@ -1,0 +1,27 @@
+{
+  "name": "pitchmaster3000",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bower": "^1.6.8",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.9",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pitchmaster/pitchmaster3000.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pitchmaster/pitchmaster3000/issues"
+  },
+  "homepage": "https://github.com/Pitchmaster/pitchmaster3000#readme"
+}
