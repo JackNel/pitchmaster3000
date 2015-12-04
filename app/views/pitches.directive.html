@@ -6,8 +6,10 @@
   <div ng-if="pitch.comments.length > 0">
     <p> Comments:</p>
     <div ng-repeat="comment in pitch.comments">
-      <h5>{{comment.name}}</h5>
+    <div class="entry">
+      <h5><b> Name: </b>{{comment.name}}</h5>
       <p>{{comment.text}}</p>
+    </div>
     </div>
   </div>
   <a href="" class="btn btn-primary" ng-init="count=0" ng-click="count=count+1">Comment</a>
