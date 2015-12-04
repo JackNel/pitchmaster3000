@@ -12,8 +12,8 @@
         vm.pitches = pitches;
       });
 
-      vm.addPitch = function(pitch){
-        PitchService.addPitch(movie);
+      vm.addPitch = function(newPitch){
+        PitchService.emit(newPitch);
       };
 
       vm.addComment = function(pitch, comment){
