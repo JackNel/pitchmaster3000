@@ -28,8 +28,6 @@
       };
 
       return{
-        addPitch: addPitch,
-        addComment: addComment,
         emit: emit,
         on: on
       };
