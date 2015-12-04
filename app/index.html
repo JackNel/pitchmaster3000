@@ -11,14 +11,14 @@
     <div class="row"><img src="tiy-logo.png"><h1>PitchMaster 3000<span id="copy"> TIY and T-Sharp Productions &#174;</span></h1></div>
     <div class="row">
     <div class="col-xs-6 noRight"><a href="#/addPitch" class="btn btn-default noRad">Add Pitch</a></div>
-    <div class="col-xs-6 noLeft"><a href="#/pitches" class="btn btn-default noRad">View Pitches</a></div>
+    <div class="col-xs-6 noLeft"><a href="#/pitches" ng-click="pitchCtrl.getPitches()" class="btn btn-default noRad">View Pitches</a></div>
     </div>
   </header>
 
   <div class="container">
     <ng-view></ng-view>
   </div>
-    <script src="/socket.io/socket.io.js" charset="utf-8"></script>    
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
     <script src="bower_components/angular/angular.js" charset="utf-8"></script>
     <script src="bower_components/underscore/underscore.js" charset="utf-8"></script>
     <script src="bower_components/angular-route/angular-route.js" charset="utf-8"></script>

@@ -28,10 +28,12 @@
 
       });
 
+      vm.getPitches = function(){
       PitchService.on('all:pitches',function(data){
         vm.pitches= data;
       });
-
+    };
+    vm.getPitches();
 
     });
 
