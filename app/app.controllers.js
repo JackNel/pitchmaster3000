@@ -34,6 +34,12 @@
         vm.pitches.push(pitch);
 
       });
+
+    vm.addComment = function(newComment){
+      console.log(newComment);
+      PitchService.emit('new:comment', newComment);
+      vm.newComment="";
+    };
     });
 
 }());
