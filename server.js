@@ -34,9 +34,10 @@ io.on('connection', function(socket) {
       socket.emit('all:pitches', data)
     });
 
-  socket.on('new:pitch', function(titleVal, contentVal, needsVal) {
+  socket.on('new:pitch', function(titleVal, authorVal, contentVal, needsVal) {
     var pitch = new Pitch({
         title: titleVal,
+        author: authorVal,
         content: contentVal,
         needs: needsVal,
     });
