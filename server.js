@@ -41,7 +41,7 @@ io.on('connection', function(socket) {
         content: contentVal,
         needs: needsVal,
     });
-
+    console.log(pitch);
     pitch.save(function(err,data) {
       console.log(data);
       io.emit('new:pitch', data.title, data.content, data.needs);
