@@ -34,17 +34,22 @@ io.on('connection', function(socket) {
       socket.emit('all:pitches', data)
     });
 
-  socket.on('new:pitch', function(titleVal, authorVal, contentVal, needsVal) {
+  socket.on('new:pitch', function(val) {
+    console.log('val', val);
     var pitch = new Pitch({
-        title: titleVal,
-        author: authorVal,
-        content: contentVal,
-        needs: needsVal,
+        title: val.title,
+        author: val.author,
+        content: val.content,
+        needs: val.needs,
     });
-    console.log(pitch);
+    // console.log(pitch);
     pitch.save(function(err,data) {
-      console.log(data);
-      io.emit('new:pitch', pitch);
+      if (err) {
+        console.log("OH FUCK", err);
+        return;
+      }
+      console.log(" YAY", data);
+      io.emit('new:pitch', data);
     });
   });
 });
