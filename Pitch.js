@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var pitchSchema = new mongoose.Schema({
   title: {type: String},
+  author: {type: String},
   content: {type: String},
   needs: {type: String},
   comments: {type: Array}
@@ -9,4 +10,4 @@ var pitchSchema = new mongoose.Schema({
 
 var Pitch = mongoose.model("Pitch", pitchSchema);
 
-module.exports = PItch;
+module.exports = Pitch;
