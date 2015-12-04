@@ -15,11 +15,11 @@
         })
         .when('/addPitch',{
           templateUrl: 'views/form.html',
-          controller: 'PitchController'
+          controller: 'PitchController as pitchCtrl'
         })
         .when('/pitches',{
           templateUrl: 'views/list.html',
-          controller: 'PitchController'
+          controller: 'PitchController as pitchCtrl'
         })
         .when('/404',{
           template: '<h1>Sorry page not found. No final project for you!</h1>'

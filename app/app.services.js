@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('pitches')
+    .module('pitchmaster')
     .factory('PitchService', function($http, _, $rootScope){
       var socket =io();
 
