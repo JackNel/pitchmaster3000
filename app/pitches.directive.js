@@ -10,7 +10,6 @@
         templateUrl: 'views/pitches.directive.html',
         scope: {
           pitch: '=',
-          action: '&'
         },
       };
 
