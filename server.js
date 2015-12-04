@@ -31,12 +31,19 @@ io.on('connection', function(socket) {
 
 
     Pitch.find({},function(err,data) {
-      console.log(data);
       socket.emit('all:pitches', data);
     });
-
+  socket.on('new:comment', function(val){
+    console.log('new comment', val);
+    Pitch.findById(val._id, function(err,pitch) {
+      pitch.comments = val.comments
+      pitch.save(function () {
+        socket.emit('new:comment');
+      });
+    });
+  });
   socket.on('new:pitch', function(val) {
-    console.log('val', val);
+    // console.log('val', val);
     var pitch = new Pitch({
         title: val.title,
         author: val.author,
