@@ -35,12 +35,26 @@ io.on('connection', function(socket) {
     });
   socket.on('new:comment', function(val){
     console.log('new comment', val);
-    Pitch.findById(val._id, function(err,pitch) {
-      pitch.comments = val.comments
-      pitch.save(function () {
-        socket.emit('new:comment');
-      });
-    });
+
+    Pitch.findByIdAndUpdate(
+      val._id, {$push: {comments: val.comments.pop()}},
+      {safe: true, upsert: true, new: true},
+      function(err, pitch) {
+        if(err) {
+          console.log("UPDATE ERR", err);
+          throw err;
+        }
+       socket.emit('new:comment', pitch);
+      }
+    )
+
+
+    // Pitch.findById(val._id, function(err,pitch) {
+    //   pitch.comments = val.comments
+    //   pitch.save(function () {
+    //     socket.emit('new:comment');
+    //   });
+    // });
   });
   socket.on('new:pitch', function(val) {
     // console.log('val', val);
