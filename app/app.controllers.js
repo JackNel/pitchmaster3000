@@ -19,7 +19,7 @@
 
       vm.addPitch = function(newPitch) {
         PitchService.emit('new:pitch', newPitch);
-        vm.newPitch = "";
+        vm.newPitch = {title: "", content "", needs: "", author: ""};
       };
       vm.putComment = function(pitch){
         PitchService.emit('new:comment', pitch);
